@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+///退出底部弹框
 typedef void(^didExitAction)(void);
+///弹框内cell点击
+typedef void(^didCellAction)(NSInteger index);
+///弹框内cell内button点击：此demo为去评价
+typedef void(^didGoEvaluationAction)(NSInteger index);
 
 @interface FFBottom_upView : UIView
 
@@ -28,7 +32,21 @@ typedef void(^didExitAction)(void);
                   Description:(NSString *)description
                     DataArray:(NSArray *)dataArray;
 
+
+/**
+ 退出底部弹框
+ */
 @property (nonatomic, copy) didExitAction exitBlock;
+
+/**
+ 弹框内cell 点击
+ */
+@property (nonatomic, copy) didCellAction cellBlock;
+
+/**
+ 弹框内cell内button点击：此demo为去评价
+ */
+@property (nonatomic, copy) didGoEvaluationAction goEvaluationBlock;
 @end
 
 NS_ASSUME_NONNULL_END

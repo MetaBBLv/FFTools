@@ -117,5 +117,8 @@
 #pragma mark - event response
 - (void)goEvaluationBtnAction {
     NSLog(@"去评价>>>>>");
+    if (self.goEvaluationToCellBlock) {
+        self.goEvaluationToCellBlock();
+    }
 }
 @end
