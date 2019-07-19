@@ -7,7 +7,7 @@
 ## 001:Bottom-up pop-up View（自下而上的弹出框）
 
 ### 截图：
-![FFTools/FFTools](./Bottom-up pop-up View.gif)
+![image](https://github.com/DidiFly/FFTools/blob/master/FFTools/Bottom-up%20pop-up%20View.gif)
 
 ### 说明：
 这个demo描述了自页面底部向上的弹出框（也可以是其他方向，根据需求更好就好），涉及到了iOS中常见的响应链
