@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Masonry.h"
+#import "IQKeyboardManager.h"
 
 //宏
 #import "UtilsMacros.h"

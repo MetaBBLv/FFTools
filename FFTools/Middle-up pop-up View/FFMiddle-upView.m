@@ -242,7 +242,36 @@
 /// 获取验证码
 /// @param sender sender
 - (void)getCodeBtnAction:(UIButton *)sender {
+    //短信提示
+    if ([self.phoneTextField.text isEqualToString:@""])
+    {
+        NSLog(@"手机号不能为空");
+        return;
+    }
     
+    [sender setEnabled:NO];
+    [sender setBackgroundColor:[UIColor colorWithHexString:@"f5f5f5"]];
+    dispatch_queue_t asynchronousQueue = dispatch_queue_create("daojishi", NULL);
+    dispatch_async(asynchronousQueue, ^{
+        
+        for (NSInteger i = 59; i>-1; i--)
+        {
+            [NSThread sleepForTimeInterval:1];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [sender setTitle:[NSString stringWithFormat:@"%lds",(long)i] forState:UIControlStateDisabled];
+                [sender setBackgroundColor:[UIColor colorWithHexString:@"f5f5f5"]];
+                if (i == 0)
+                {
+                    [sender setTitle:@"重新发送" forState:UIControlStateNormal];
+                    [sender setEnabled:YES];
+                    [sender setTitle:[NSString stringWithFormat:@"59"] forState:UIControlStateDisabled];
+                    [sender setBackgroundColor:[UIColor colorWithHexString:@"f5f5f5"]];
+                }
+            });
+        }
+    });
+    NSLog(@"接下来自定义操作。。。。");
 }
 
 ///  确定
