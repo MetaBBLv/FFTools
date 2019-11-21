@@ -36,6 +36,34 @@
     }];
 ```
 
+## 002:Middle-up pop-up View（例：绑定手机号弹出框）
+
+### 截图：
+![image](https://github.com/DidiFly/FFTools/blob/master/FFTools/Bottom-up%20pop-up%20View.gif)
+
+### 说明：
+这个demo描述了绑定手机号的弹出框（也可以是其他方向，根据需求更好就好），涉及到了iOS中常见的响应链，Block
+
+### 使用方法
+导入项目中的Middle-up pop-up View文件夹，在需要弹出框的页面导入```#import "FFMiddle-upView.h"```然后初始化该类：
+```
+ _middle_upView = [[FFMiddle_upView alloc] initWithFrame:UIScreen.mainScreen.bounds Title:@"绑定手机"];
+```
+内部有3个响应事件，分别是：退出弹框、弹框内cell点击、弹框内cell内的button点击
+```
+    kWeakSelf(self);
+    ///退出弹框
+    [_middle_upView setExitBlock:^{
+        [weakself.middle_upView removeFromSuperview];
+    }];
+    
+    ///确定
+    [_middle_upView setSubmitBlock:^{
+        NSLog(@"执行操作。。。。。。");
+        [weakself.middle_upView removeFromSuperview];
+    }];
+```
+
 ## 持续更新
 
 
