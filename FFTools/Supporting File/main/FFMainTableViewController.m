@@ -8,6 +8,7 @@
 
 #import "FFMainTableViewController.h"
 #import "FFBottom-upViewController.h"
+#import "FFMiddle-upViewController.h"
 
 @interface FFMainTableViewController ()
 @property (nonatomic, copy) NSArray *toolsArray;
@@ -25,7 +26,7 @@
 
 - (NSArray *)toolsArray{
     if (!_toolsArray) {
-        _toolsArray = @[@"Bottom-up pop-up view"];
+        _toolsArray = @[@"Bottom-up pop-up view",@"Bottom-up pop-up view(bind mobile)"];
     }
     return _toolsArray;
 }
@@ -54,8 +55,15 @@
         {
             FFBottom_upViewController *vc = [[FFBottom_upViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1:
+        {
+            FFMiddle_upViewController *vc = [[FFMiddle_upViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+            
             
         default:
             break;

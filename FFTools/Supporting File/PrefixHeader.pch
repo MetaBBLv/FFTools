@@ -14,4 +14,7 @@
 //宏
 #import "UtilsMacros.h"
 
+//hex
+#import "UIColor+FFAdd.h"
+
 #endif /* PrefixHeader_pch */

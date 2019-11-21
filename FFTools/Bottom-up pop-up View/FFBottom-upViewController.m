@@ -10,12 +10,8 @@
 #import "FFBottom-upView.h"
 
 @interface FFBottom_upViewController ()
-///阴影层
-@property (nonatomic, strong) UIView *shadowView;
 ///展示层
 @property (nonatomic, strong) FFBottom_upView *bottom_upView;
-///移除层
-@property (nonatomic, strong) UIButton *removeBtn;
 
 @end
 

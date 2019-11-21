@@ -64,7 +64,7 @@
 #pragma mark - lazyloading
 - (UIButton *)removeBtn {
     if (!_removeBtn) {
-        _removeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 380/WIDTH_6_SCALE)];
+        _removeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 380/WIDTH_6_SCALE)];
         _removeBtn.backgroundColor = [UIColor clearColor];
         [_removeBtn addTarget:self action:@selector(exitBtnAction) forControlEvents:UIControlEventTouchUpInside];
     }

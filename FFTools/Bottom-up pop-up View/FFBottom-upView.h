@@ -19,7 +19,7 @@ typedef void(^didGoEvaluationAction)(NSInteger index);
 @interface FFBottom_upView : UIView
 
 /**
- 弹出c视图初始化
+ 弹出视图初始化
 
  @param frame frame
  @param title 标题

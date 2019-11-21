@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBCA53FC2386216B00234C94 /* FFMiddle-upView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCA53FB2386216B00234C94 /* FFMiddle-upView.m */; };
+		CBCA5400238621E600234C94 /* FFMiddle-upViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCA53FF238621E600234C94 /* FFMiddle-upViewController.m */; };
+		CBCA540723862DE300234C94 /* NSString+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCA540423862DE300234C94 /* NSString+FFAdd.m */; };
+		CBCA540823862DE300234C94 /* UIColor+FFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCA540623862DE300234C94 /* UIColor+FFAdd.m */; };
 		CBCDBE8322E05BB00019A77C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCDBE8222E05BB00019A77C /* AppDelegate.m */; };
 		CBCDBE8922E05BB00019A77C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCDBE8722E05BB00019A77C /* Main.storyboard */; };
 		CBCDBE8B22E05BB40019A77C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCDBE8A22E05BB40019A77C /* Assets.xcassets */; };
@@ -29,6 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CBCA53FA2386216B00234C94 /* FFMiddle-upView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFMiddle-upView.h"; sourceTree = "<group>"; };
+		CBCA53FB2386216B00234C94 /* FFMiddle-upView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FFMiddle-upView.m"; sourceTree = "<group>"; };
+		CBCA53FE238621E600234C94 /* FFMiddle-upViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFMiddle-upViewController.h"; sourceTree = "<group>"; };
+		CBCA53FF238621E600234C94 /* FFMiddle-upViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FFMiddle-upViewController.m"; sourceTree = "<group>"; };
+		CBCA540223862DE300234C94 /* FFKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKitMacro.h; sourceTree = "<group>"; };
+		CBCA540323862DE300234C94 /* UIColor+FFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FFAdd.h"; sourceTree = "<group>"; };
+		CBCA540423862DE300234C94 /* NSString+FFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFAdd.m"; sourceTree = "<group>"; };
+		CBCA540523862DE300234C94 /* NSString+FFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFAdd.h"; sourceTree = "<group>"; };
+		CBCA540623862DE300234C94 /* UIColor+FFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FFAdd.m"; sourceTree = "<group>"; };
 		CBCDBE7E22E05BB00019A77C /* FFTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCDBE8122E05BB00019A77C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CBCDBE8222E05BB00019A77C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CBCA53FD2386217F00234C94 /* Middle-up pop-up View */ = {
+			isa = PBXGroup;
+			children = (
+				CBCA53FE238621E600234C94 /* FFMiddle-upViewController.h */,
+				CBCA53FF238621E600234C94 /* FFMiddle-upViewController.m */,
+				CBCA53FA2386216B00234C94 /* FFMiddle-upView.h */,
+				CBCA53FB2386216B00234C94 /* FFMiddle-upView.m */,
+			);
+			path = "Middle-up pop-up View";
+			sourceTree = "<group>";
+		};
+		CBCA540123862DA900234C94 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CBCA540323862DE300234C94 /* UIColor+FFAdd.h */,
+				CBCA540623862DE300234C94 /* UIColor+FFAdd.m */,
+				CBCA540523862DE300234C94 /* NSString+FFAdd.h */,
+				CBCA540423862DE300234C94 /* NSString+FFAdd.m */,
+				CBCA540223862DE300234C94 /* FFKitMacro.h */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		CBCDBE7522E05BB00019A77C = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +142,7 @@
 			children = (
 				CBCDBE9722E05BE70019A77C /* AppDelegate */,
 				CBCDBE9F22E066190019A77C /* Bottom-up pop-up View */,
+				CBCA53FD2386217F00234C94 /* Middle-up pop-up View */,
 				CBCDBE9822E05BEF0019A77C /* Supporting File */,
 			);
 			path = FFTools;
@@ -123,6 +160,7 @@
 		CBCDBE9822E05BEF0019A77C /* Supporting File */ = {
 			isa = PBXGroup;
 			children = (
+				CBCA540123862DA900234C94 /* General */,
 				CBCDBE9B22E05CC80019A77C /* main */,
 				CBCDBECF22E0780E0019A77C /* Define */,
 				CBCDBEA922E072600019A77C /* ThirdParty */,
@@ -281,7 +319,10 @@
 				CBCDBEA522E0687D0019A77C /* FFBottom-upView.m in Sources */,
 				CBCDBEC722E073470019A77C /* MASConstraintMaker.m in Sources */,
 				CBCDBEA222E066890019A77C /* FFBottom-upViewController.m in Sources */,
+				CBCA53FC2386216B00234C94 /* FFMiddle-upView.m in Sources */,
+				CBCA540723862DE300234C94 /* NSString+FFAdd.m in Sources */,
 				CBCDBEC522E073470019A77C /* ViewController+MASAdditions.m in Sources */,
+				CBCA5400238621E600234C94 /* FFMiddle-upViewController.m in Sources */,
 				CBCDBEC422E073470019A77C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				CBCDBEC622E073470019A77C /* MASCompositeConstraint.m in Sources */,
 				CBCDBE9E22E060380019A77C /* FFMainTableViewController.m in Sources */,
@@ -293,6 +334,7 @@
 				CBCDBECD22E073470019A77C /* MASViewAttribute.m in Sources */,
 				CBCDBECB22E073470019A77C /* MASConstraint.m in Sources */,
 				CBCDBE8322E05BB00019A77C /* AppDelegate.m in Sources */,
+				CBCA540823862DE300234C94 /* UIColor+FFAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
