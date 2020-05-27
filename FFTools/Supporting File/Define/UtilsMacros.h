@@ -26,6 +26,8 @@
 /**iphone X 顶部状态栏高度 */
 #define SafeAreaTopStateHeight (SCREEN_HEIGHT == 812.0 ? 44 : 20)
 
+#define SafeAreaBottomHeighTtabbar ([[UIApplication sharedApplication] statusBarFrame].size.height == 20 ? 49 : 83)
+
 //5S宽高比例
 #define WIDTH_5S_SCALE 320.0 * [UIScreen mainScreen].bounds.size.width
 #define HEIGHT_5S_SCALE 568.0 * [UIScreen mainScreen].bounds.size.height

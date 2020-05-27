@@ -9,6 +9,7 @@
 #import "FFMainTableViewController.h"
 #import "FFBottom-upViewController.h"
 #import "FFMiddle-upViewController.h"
+#import "FFMulti_levelMenuLinkageViewController.h"
 
 @interface FFMainTableViewController ()
 @property (nonatomic, copy) NSArray *toolsArray;
@@ -21,12 +22,11 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.tableFooterView = [[UIView alloc] init];
-    
 }
 
 - (NSArray *)toolsArray{
     if (!_toolsArray) {
-        _toolsArray = @[@"Bottom-up pop-up view",@"Bottom-up pop-up view(bind mobile)"];
+        _toolsArray = @[@"Bottom-up pop-up view",@"Bottom-up pop-up view(bind mobile)",@"Multi-level menu linkage"];
     }
     return _toolsArray;
 }
@@ -60,6 +60,12 @@
         case 1:
         {
             FFMiddle_upViewController *vc = [[FFMiddle_upViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:
+        {
+            FFMulti_levelMenuLinkageViewController *vc = [[FFMulti_levelMenuLinkageViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
