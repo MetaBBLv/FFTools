@@ -64,6 +64,33 @@
     }];
 ```
 
+## 003:Multi-level menu linkage（例：多级菜单联动）
+
+### 截图：
+![image](https://github.com/DidiFly/FFTools/blob/master/FFTools/%20multilevel-linkage-menu.gif)
+
+### 说明：
+这个demo解决了多级菜单联动问题，涉及到了数据的复杂计算，tableView的delegate的全面应用
+
+### 使用方法
+导入项目中的Multi-level menu linkage文件夹，在需要弹出框的页面导入```FFMulti_levelMenuLinkageViewController.h"```然后初始化该类：
+```
+_categoryView = [[FFCategoryView alloc] initWithFrame:UIScreen.mainScreen.bounds data:allArray];
+```
+内部有2个响应事件，分别是：退出弹框、弹框内的确认选择button点击
+```
+    kWeakSelf(self);
+    ///退出底部弹框
+    [self.categoryView setExitBlock:^{
+        [weakself.categoryView removeFromSuperview];
+    }];
+    ///提交选择
+    [self.categoryView setSubmitBlock:^(NSString * _Nonnull detail) {
+        [weakself.btn setTitle:detail forState:UIControlStateNormal];
+        [weakself.categoryView removeFromSuperview];
+    }];
+ ```
+
 ## 持续更新
 
 
