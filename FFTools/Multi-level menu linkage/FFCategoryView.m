@@ -286,7 +286,7 @@
         titleLabel.font = FONTANDBOLD(14);
         if (indexPath.section == 0) {
             view.frame = CGRectMake(0, 0, SCREEN_WIDTH-95/WIDTH_6_SCALE, 0);
-            titleLabel.frame = CGRectMake(10/WIDTH_6_SCALE, 0, 100/WIDTH_6_SCALE, 50/WIDTH_6_SCALE);
+            titleLabel.frame = CGRectMake(10/WIDTH_6_SCALE, 0, 200/WIDTH_6_SCALE, 50/WIDTH_6_SCALE);
             titleLabel.text = @"请选择分类";
             [showAllbtn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(0);
@@ -297,7 +297,7 @@
         else
         {
             view.frame = CGRectMake(0, 15/WIDTH_6_SCALE, SCREEN_WIDTH-95/WIDTH_6_SCALE, 10/WIDTH_6_SCALE);
-            titleLabel.frame = CGRectMake(10/WIDTH_6_SCALE, 25/WIDTH_6_SCALE, 100/WIDTH_6_SCALE, 50/WIDTH_6_SCALE);
+            titleLabel.frame = CGRectMake(10/WIDTH_6_SCALE, 25/WIDTH_6_SCALE, 200/WIDTH_6_SCALE, 50/WIDTH_6_SCALE);
             if ([currentArray[indexPath.section][indexPath.row][@"nextTitle"] isEqual:[NSNull null]]) {
                 titleLabel.text = @"请选择";
             }
